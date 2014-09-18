@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>{{ title }} - XCHANGE的博客</title>
+  <meta name="keywords" content="XCHANHE,Python,Django">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load staticfiles %}
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static "css/xcbase.css" %}">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="header">
+        <h1>XCHANGE的博客</h1>
+      </div>
+      <div id="content" class="row">
+      {% block content %}{% endblock %}
+      </div>
+      <div id="footer" class="text-center">
+        <address>XCHANGE.IM &copy; 2014</address>
+      </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

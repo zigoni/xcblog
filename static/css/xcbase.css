@@ -1,0 +1,35 @@
+#header {
+    margin: 1em 0;
+    border-bottom: 1px solid #eee;
+}
+
+#header h1 {
+    font-family: "Helvetica Neue",Helvetica,Arial,SimHei,sans-serif;
+    font-weight: bolder;
+}
+
+#footer {
+    margin: 1em 0;
+    padding: 1em 0;
+    border-top: 1px solid #eee;
+}
+
+.blogpost {
+    padding: 1em 0;
+}
+
+.blogpost .blogpost_title {
+    margin-top: -0.5em;
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+.blogpost .blogpost_content {}
+.blogpost .blogpost_content p {
+    text-indent: 2em;
+}
+
+.blogpost .blogpost_info {
+    font-size: 0.75em;
+    color: #999;
+}
