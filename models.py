@@ -21,7 +21,7 @@ class BlogCategory(models.Model):
 class BlogPost(models.Model):
     title = models.CharField('标题', max_length=128)
     is_active = models.BooleanField('是否可见', default=True)
-    category = models.ForeignKey(BlogCategory, default=1)
+    category = models.ForeignKey(BlogCategory, null=True)
     created_time = models.DateTimeField('创建时间', auto_now_add=True)
     revised_time = models.DateTimeField('修改时间', auto_now=True)
     read_times = models.PositiveIntegerField('阅读次数', default=0)
