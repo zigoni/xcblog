@@ -15,7 +15,15 @@
         <h1>XCHANGE的博客</h1>
       </div>
       <div id="content" class="row">
-      {% block content %}{% endblock %}
+        <div id="blogpost_list" class="col-md-9">
+        {% block content %}{% endblock %}
+        </div>
+        <div id="sidebar" class="col-md-3">
+          <div id="profile">
+            <img src="{% static "img/gravatar.png" %}" alt="啊咧，这个人的头不见了！">
+            <p>想找个黑仪一样的妹子当老婆的我也真是醉了……</p>
+          </div>
+        </div>
       </div>
       <div id="footer" class="text-center">
         <address>XCHANGE.IM &copy; 2014</address>

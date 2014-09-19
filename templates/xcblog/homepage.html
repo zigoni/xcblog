@@ -1,18 +1,14 @@
 {% extends 'xcblog/base.html' %}
 
 {% block content %}
-<div id="blogpost_list" class="col-md-9">
-  {% for b in blogposts %}
-  <div class="blogpost">
-    <h2 class="blogpost_title">{{ b.title }}</h2>
-    <div class="blogpost_content">
-      {{ b.content|safe }}
-    </div>
-    <p class="blogpost_info">分类：{{ b.category }} | 创建时间：{{ b.created_time|date:"Y-n-j G:i" }} | 修改时间：{{ b.revised_time|date:"Y-n-j G:i" }} | 阅读次数：{{ b.read_times }}</p>
+{% for b in blogposts %}
+<div class="blogpost">
+  <h2 class="blogpost_title">{{ b.title }}</h2>
+  <div class="blogpost_content">
+    {{ b.content|safe }}
   </div>
-  {% if not forloop.last %}<hr>{% endif %}
-  {% endfor %}
+  <p class="blogpost_info">分类：{{ b.category }} | 创建时间：{{ b.created_time|date:"Y-n-j G:i" }} | 修改时间：{{ b.revised_time|date:"Y-n-j G:i" }} | 阅读次数：{{ b.read_times }}</p>
 </div>
-<div id="sidebar">
-</div>
+{% if not forloop.last %}<hr>{% endif %}
+{% endfor %}
 {% endblock %}

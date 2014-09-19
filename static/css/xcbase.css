@@ -15,7 +15,7 @@
 }
 
 .blogpost {
-    padding: 1em 0;
+    padding-top: 10px;
 }
 
 .blogpost .blogpost_title {
@@ -32,4 +32,15 @@
 .blogpost .blogpost_info {
     font-size: 0.75em;
     color: #999;
+}
+
+#profile {}
+#profile img {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+#profile p {
+    font-size: 0.75em;
+    text-indent: 2em;
 }
