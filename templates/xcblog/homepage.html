@@ -3,7 +3,7 @@
 {% block content %}
 {% for b in blogposts %}
 <div class="blogpost">
-  <h2 class="blogpost_title">{{ b.title }}</h2>
+  <h2 class="blogpost_title"><a href="{% url 'xc-show-blogpost' b.pk %}">{{ b.title }}</a></h2>
   <div class="blogpost_content">
     {{ b.content|safe }}
   </div>

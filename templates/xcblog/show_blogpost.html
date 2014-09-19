@@ -9,7 +9,7 @@
   <p class="blogpost_info">分类：{{ blogpost.category }} | 创建时间：{{ blogpost.created_time|date:"Y-n-j G:i" }} | 修改时间：{{ blogpost.revised_time|date:"Y-n-j G:i" }} | 阅读次数：{{ blogpost.read_times }}</p>
 </div>
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="b{{ blogpost.pk }}" data-title="{{ blogpost.title }}" data-url="{% url 'xc-show-blogpost' blogpost.pk"></div>
+<div class="ds-thread" data-thread-key="b{{ blogpost.pk }}" data-title="{{ blogpost.title }}" data-url="{% url 'xc-show-blogpost' blogpost.pk %}"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
