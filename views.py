@@ -18,7 +18,7 @@ def show_blogpost(request, pk):
         return render(request, 'xcblog/not_active.html', context)
     else:
         blogpost.read_times += 1
-        blogpost.save()
+        blogpost.save(update_fields=['read_times'])
         context = {
             'title': blogpost.title,
             'blogpost': blogpost,
