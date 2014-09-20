@@ -21,6 +21,6 @@ def show_blogpost(request, pk):
         blogpost.save(update_fields=['read_times'])
         context = {
             'title': blogpost.title,
-            'blogpost': blogpost,
+            'b': blogpost,
         }
         return render(request, 'xcblog/show_blogpost.html', context)

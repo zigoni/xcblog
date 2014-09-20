@@ -2,13 +2,7 @@
 
 {% block content %}
 {% for b in blogposts %}
-<div class="blogpost">
-  <h2 class="blogpost_title"><a href="{% url 'xc-show-blogpost' b.pk %}">{{ b.title }}</a></h2>
-  <div class="blogpost_content">
-    {{ b.content|safe }}
-  </div>
-  <p class="blogpost_info">分类：{{ b.category }} | 创建时间：{{ b.created_time|date:"Y-n-j G:i" }} | 修改时间：{{ b.revised_time|date:"Y-n-j G:i" }} | 阅读次数：{{ b.read_times }}</p>
-</div>
+{% include 'xcblog/blogpost.html' %}
 {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
 {% endblock %}
