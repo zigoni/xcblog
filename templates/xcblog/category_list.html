@@ -2,7 +2,7 @@
   <div class="panel-heading">日志分类</div>
   <ul class="list-group">
     {% for c in categories %}
-    <li class="list-group-item">{{ c.name }} ({{ c.blogpost_num }})</li>
+    <li class="list-group-item"><a href="{% url 'xc-show-category' c.pk %}">{{ c.name }} ({{ c.blogpost_num }})</a></li>
     {% endfor %}
   </ul>
 </div>
