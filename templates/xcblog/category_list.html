@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+  <div class="panel-heading">日志分类</div>
+  <ul class="list-group">
+    {% for c in categories %}
+    <li class="list-group-item">{{ c.name }} ({{ c.blogpost_num }})</li>
+    {% endfor %}
+  </ul>
+</div>
