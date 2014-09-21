@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+  <div class="panel-heading">日志归档</div>
+  <ul class="list-group">
+    {% for a in archives %}
+    <li class="list-group-item"><a href="{% url 'xc-show-archive' year=a.year month=a.month2 %}">{{ a.year }}年{{ a.month }}月</a></li>
+    {% endfor %}
+  </ul>
+</div>

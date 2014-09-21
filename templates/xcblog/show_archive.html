@@ -1,0 +1,12 @@
+{% extends 'xcblog/base.html' %}
+
+{% block content %}
+<ol class="breadcrumb">
+  <li><a href="{% url 'xc-homepage' %}">首页</a></li>
+  <li><a href="{% url 'xc-show-archive' year=a.year month=a.month2 %}">{{ a.year }}年{{ a.month }}月归档</a></li>
+</ol>
+{% for b in blogposts %}
+{% include 'xcblog/blogpost.html' %}
+{% if not forloop.last %}<hr>{% endif %}
+{% endfor %}
+{% endblock %}

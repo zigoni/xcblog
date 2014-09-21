@@ -34,3 +34,17 @@ def show_category(request, pk):
         'blogposts': blogposts,
     }
     return render(request, 'xcblog/show_category.html', context)
+
+def show_archive(request, year, month):
+    a = {
+        'year': int(year),
+        'month': int(month),
+        'month2': str(month),
+    }
+    blogposts = BlogPost.objects.filter(is_active=True, created_time__year=a['year'], created_time__month=a['month'])
+    context = {
+        'title': '%d年%s月归档' % (a['year'], a['month2']),
+        'a': a,
+        'blogposts': blogposts,
+    }
+    return render(request, 'xcblog/show_archive.html', context)
