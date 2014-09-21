@@ -1,6 +1,11 @@
 {% extends 'xcblog/base.html' %}
 
 {% block content %}
+<ol class="breadcrumb">
+  <li><a href="{% url 'xc-homepage' %}">首页</a></li>
+  <li><a href="{% url 'xc-show-category' b.category.pk %}">{{ b.category.name }}</a></li>
+  <li><a href="{% url 'xc-show-blogpost' b.pk %}">b{{ b.pk }}</a></li>
+</ol>
 {% include 'xcblog/blogpost.html' %}
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="b{{ b.pk }}" data-title="{{ b.title }}" data-url="http://xchange.im{% url 'xc-show-blogpost' b.pk %}"></div>
@@ -8,14 +13,13 @@
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"xchange"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
 <!-- 多说公共JS代码 end -->
 {% endblock %}
