@@ -1,11 +1,13 @@
+body {
+    font-family: "Segoe UI",Arial,"Microsoft YaHei",SimHei,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bolder;
+}
+
 #header {
     margin: 1em 0;
     border-bottom: 1px solid #eee;
-}
-
-#header h1 {
-    font-family: "Helvetica Neue",Helvetica,Arial,SimHei,sans-serif;
-    font-weight: bolder;
 }
 
 #footer {
