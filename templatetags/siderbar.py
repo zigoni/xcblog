@@ -21,6 +21,7 @@ class BlogArchiveList(template.Node):
     def render(self, context):
         archives = BlogPost.objects.datetimes('created_time', 'month')
         output_archives = [{'year': d.year, 'month': d.month, 'month2': '%02d' % d.month} for d in archives]
+        output_archives.reverse()
         t = get_template('xcblog/archive_list.html')
         output = t.render(template.Context({'archives': output_archives}))
         return output
